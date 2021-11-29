@@ -6,7 +6,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SideBar />
+      <div className="flexed-content">
+        <SideBar />
+        <p style={{ color: "white" }}>iuyftrs</p>
+      </div>
     </div>
   );
 }
