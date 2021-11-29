@@ -1,7 +1,49 @@
 import React from "react";
 
 const Settings = () => {
-  return <div>I am the settings</div>;
+  return (
+    <div style={{ color: "white" }}>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+      <p>Settings</p>
+    </div>
+  );
 };
 
 export default Settings;
