@@ -11,18 +11,28 @@
   color: #ea7c69;
 }
 .menu-item-active {
-  background-color: #fff;
+  background-color: #282937;
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.menu-item-active i {
+  color: #fff;
+  background-color: #ea7c69;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .main-header {
   display: flex;
   flex: 1;
-  background-color: blue;
+  background-color: #282937;
   height: 60px;
 }
 .header-logo-section {
   display: flex;
   width: 10%;
+  color: #fff;
   font-weight: bold;
   font-style: italic;
   font-family: fantasy;
