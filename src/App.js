@@ -8,7 +8,29 @@ function App() {
       <Header />
       <div className="flexed-content">
         <SideBar />
-        <p style={{ color: "white" }}>iuyftrs</p>
+        {/* <Switch>
+                <Route
+                  exact
+                  path="/dashboard"
+                  name="Dashboard"
+                  render={(props) => <Login {...props} />}
+                />
+                <Route
+                  exact
+                  path="/settings"
+                  name="Settings"
+                  render={(props) => <Forgot {...props} />}
+                />
+                <Route
+                  exact
+                  path="/reports"
+                  name="Reports"
+                  render={(props) => <Forgot {...props} />}
+                />
+                <Route>
+                  <dashboard />
+                </Route>
+              </Switch> */}
       </div>
     </div>
   );
