@@ -1,7 +1,15 @@
 import React from "react";
 
 const Header = () => {
-  return <div>I am a header with no problems</div>;
+  return (
+    <div className="main-header">
+      <div className="header-logo-section">
+        <p>gPOS</p>
+      </div>
+      <div className="header-main-area">Main Area</div>
+      <div className="header-right-area">Right Section</div>
+    </div>
+  );
 };
 
 export default Header;

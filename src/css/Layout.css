@@ -1,0 +1,38 @@
+.main-side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #1f1d2b;
+  width: 10%;
+  min-height: 100vh;
+}
+.menu-item i {
+  color: #ea7c69;
+}
+.menu-item-active {
+  background-color: #fff;
+}
+
+.main-header {
+  display: flex;
+  flex: 1;
+  background-color: blue;
+  height: 60px;
+}
+.header-logo-section {
+  display: flex;
+  width: 10%;
+  font-weight: bold;
+  font-style: italic;
+  font-family: fantasy;
+  font-size: 42px;
+  align-items: center;
+  justify-content: center;
+}
+.header-main-area {
+  width: 55%;
+}
+header-right-area {
+  width: 35%;
+}

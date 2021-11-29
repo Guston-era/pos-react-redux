@@ -1,11 +1,12 @@
 import "./css/App.css";
-import { Button } from "react-bootstrap";
+import SideBar from "./components/layout/SideBar";
+import Header from "./components/layout/Header";
 
 function App() {
   return (
     <div className="App">
-      <p> I wanna learn react</p>
-      <Button className="btn btn-warning">Go Away</Button>
+      <Header />
+      <SideBar />
     </div>
   );
 }
