@@ -4,15 +4,22 @@ body {
 .flexed-content {
   display: flex;
 }
+hr {
+  color: #fff;
+}
 
 /* dashboard styles */
 .sales-content-area {
   width: 55%;
   padding-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .cart-content-area {
   width: 35%;
-  margin-left: 11px;
+  margin-left: 11px; /* change to ten later*/
   background-color: #1f1d2b;
+  display: flex;
+  flex-direction: column;
 }
 /* dashboard styles end */
