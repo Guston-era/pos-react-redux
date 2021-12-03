@@ -9,7 +9,8 @@ const Dashboard = () => {
       <Header />
       <div className="flexed-content">
         <SideBar active="dashboard" />
-        Irun this era
+        <div className="sales-content-area">Irun this era</div>
+        <div className="cart-content-area"></div>
       </div>
     </div>
   );
