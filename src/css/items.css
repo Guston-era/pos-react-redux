@@ -1,0 +1,33 @@
+.bold {
+  font-weight: bold;
+}
+
+.item-card {
+  /* border: 1px solid black; */
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  margin-bottom: 10px;
+  /* margin-left: 5px; */
+  border-radius: 10px;
+  color: white;
+  background-color: #323342;
+}
+.item-card:hover {
+  cursor: pointer;
+}
+
+.item-image {
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 5px;
+}
+.item-content > .brand,
+.item-content > .category {
+  color: #ea7c69;
+}
+.item-content > .price {
+  float: right;
+  background-color: #ea7c69;
+  padding: 5px;
+  border-radius: 5px;
+}

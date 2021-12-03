@@ -1,5 +1,7 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import "../../css/items.css";
+import { commons } from "../../constants/common";
 
 // mock state
 const items = [
@@ -57,16 +59,20 @@ const itemCards = () => {
   return (
     <>
       {items.map(({ id, name, image, price, brand, category }) => (
-        <Col md={4} key={id}>
-          <img src={`../../../public/${image}`} className="item-image" />
+        <Col md={4} key={id} className="item-card">
+          <div className="item-image-holder">
+            <img src={`images/${image}`} className="item-image" />
+          </div>
           <div className="item-content">
-            <p>{name}</p>
-            <p>{brand}</p>
-            <p>{price}</p>
-            <p>{category}</p>
+            <p className="bold">{name}</p>
+            <p className="category">Category: {category}</p>
+            <p className="brand">Brand: {brand}</p>
+
+            <p className="price bold">{`${commons.currency} ${price}`}</p>
           </div>
         </Col>
       ))}
+      <div className="clearfix"></div>
     </>
   );
 };
