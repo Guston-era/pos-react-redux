@@ -16,8 +16,6 @@ hr {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 60px);
-  /* height: 100px; */
-  /* overflow-y: scroll; */
 }
 /* .sales-content-area::-webkit-scrollbar {
   display: none !important;
@@ -27,12 +25,17 @@ hr {
   height: 100%;
   overflow-y: scroll;
 }
+.cards-holder table {
+  color: #fff;
+}
 .cart-content-area {
   width: 35%;
   margin-left: 11px; /* change to ten later*/
   background-color: #1f1d2b;
+
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 60px);
 }
 
 /* dashboard styles end */
