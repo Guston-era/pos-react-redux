@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import CartItems from "../components/items/CartItems";
 import Categories from "../components/items/Categories";
 import ItemCards from "../components/items/ItemCards";
 import Header from "../components/layout/Header";
@@ -23,7 +24,14 @@ const Dashboard = () => {
             </div>
           </Container>
         </div>
-        <div className="cart-content-area"></div>
+        <div className="cart-content-area">
+          <hr />
+          <Container className="cards-holder">
+            <div className="row">
+              <CartItems />
+            </div>
+          </Container>
+        </div>
       </div>
     </div>
   );

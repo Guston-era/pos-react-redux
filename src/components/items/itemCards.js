@@ -2,6 +2,8 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import "../../css/items.css";
 import { commons } from "../../constants/common";
+import { useSelector, useDispatch } from "react-redux";
+import { selectItem, addToCart } from "../../redux_setup/slices/shopSlice";
 
 // mock state
 const items = [
@@ -61,23 +63,70 @@ const items = [
   },
 ];
 
-const itemCards = () => {
-  const handleAddToCart = () => {
-    alert("Add to Cart");
+const ItemCards = () => {
+  const dispatch = useDispatch();
+  const itemsFromCart = useSelector(selectItem);
+  const cartArray = [...itemsFromCart];
+  const handleAddToCart = (item) => {
+    console.log(cartArray);
+    //search if item exists in cart array
+    if (cartArray.length > 0) {
+      //proceed with check
+      const index = cartArray.findIndex((tempItem) => tempItem.id === item.id);
+      if (index !== -1) {
+        //id exists so increment the quantity
+        const newQuantity = cartArray[index].quantity;
+        cartArray.splice(index, 1, {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          image: item.image,
+          quantity: newQuantity + 1,
+        });
+        // console.log(cartArray[index].name, cartArray[index].quantity);
+      } else {
+        cartArray.push({
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          image: item.image,
+          quantity: 1,
+        });
+      }
+    } else {
+      // just add it already
+
+      cartArray.push({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        image: item.image,
+        quantity: 1,
+      });
+    }
+
+    dispatch(addToCart(cartArray));
+    console.log(cartArray);
+    // console.log(itemsFromCart);
   };
   return (
     <>
-      {items.map(({ id, name, image, price, brand, category, maxNum }) => (
-        <Col md={4} key={id} className="item-card" onClick={handleAddToCart}>
+      {items.map((item) => (
+        <Col
+          md={4}
+          key={item.id}
+          className="item-card"
+          onClick={() => handleAddToCart(item)}
+        >
           <div className="item-image-holder">
-            <img src={`images/${image}`} className="item-image" />
+            <img src={`images/${item.image}`} className="item-image" />
           </div>
           <div className="item-content">
-            <p className="bold">{name}</p>
-            <p className="category">Category: {category}</p>
-            <p className="brand">Brand: {brand}</p>
+            <p className="bold">{item.name}</p>
+            <p className="category">Category: {item.category}</p>
+            <p className="brand">Brand: {item.brand}</p>
 
-            <p className="price bold">{`${commons.currency} ${price}`}</p>
+            <p className="price bold">{`${commons.currency} ${item.price}`}</p>
           </div>
         </Col>
       ))}
@@ -86,4 +135,4 @@ const itemCards = () => {
   );
 };
 
-export default itemCards;
+export default ItemCards;

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // define initialState
 
 const initialState = {
-  shopItem: null,
+  shopItem: [],
 };
 
 // function to export
