@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
+import CartFooter from "../components/items/CartFooter";
 import CartItems from "../components/items/CartItems";
 import Categories from "../components/items/Categories";
 import ItemCards from "../components/items/ItemCards";
@@ -27,8 +28,8 @@ const Dashboard = () => {
         <div className="cart-content-area">
           <hr />
           <Container className="cards-holder">
-            <Table>
-              <thead>
+            <Table bordered>
+              <thead className="table-head">
                 <tr>
                   <th>Item</th>
                   <th>Qty</th>
@@ -38,6 +39,9 @@ const Dashboard = () => {
               <tbody>
                 <CartItems />
               </tbody>
+              <tfoot className="table-footer">
+                <CartFooter />
+              </tfoot>
             </Table>
           </Container>
         </div>

@@ -61,6 +61,24 @@ const items = [
     brand: "TP Link",
     category: "Router",
   },
+  {
+    id: 7,
+    name: "Mercusys 567",
+    image: "router.jpg",
+    maxNum: 12,
+    price: 6400,
+    brand: "Mercusys",
+    category: "Router",
+  },
+  {
+    id: 8,
+    name: "TPLink YT4",
+    image: "router.jpg",
+    maxNum: 12,
+    price: 3400,
+    brand: "TP Link",
+    category: "Router",
+  },
 ];
 
 const ItemCards = () => {
@@ -75,13 +93,14 @@ const ItemCards = () => {
       const index = cartArray.findIndex((tempItem) => tempItem.id === item.id);
       if (index !== -1) {
         //id exists so increment the quantity
-        const newQuantity = cartArray[index].quantity;
+        const newQuantity = cartArray[index].quantity + 1;
         cartArray.splice(index, 1, {
           id: item.id,
           name: item.name,
           price: item.price,
+          totalPrice: item.price * newQuantity,
           image: item.image,
-          quantity: newQuantity + 1,
+          quantity: newQuantity,
         });
         // console.log(cartArray[index].name, cartArray[index].quantity);
       } else {
@@ -89,6 +108,7 @@ const ItemCards = () => {
           id: item.id,
           name: item.name,
           price: item.price,
+          totalPrice: item.price,
           image: item.image,
           quantity: 1,
         });
@@ -100,6 +120,7 @@ const ItemCards = () => {
         id: item.id,
         name: item.name,
         price: item.price,
+        totalPrice: item.price,
         image: item.image,
         quantity: 1,
       });

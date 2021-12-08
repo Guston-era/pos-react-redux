@@ -33,15 +33,32 @@
   border-radius: 5px;
 }
 /* end styles for item cards */
-.cart-item {
-  /* border: 1px solid black; */
-  background-clip: padding-box;
-  border: 10px solid transparent;
-  margin-bottom: 10px;
-  /* margin-left: 5px; */
-  border-radius: 10px;
-  color: white;
-  background-color: #323342;
+.cart-item:hover {
+  color: #ea7c69;
+}
+.cart-description-area {
+  display: flex;
+  flex-direction: row;
+}
+.cart-image {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 5px;
+}
+.cart-info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.cart-description {
+  line-height: 5px;
+}
+.cart-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 /* styles for cart items */
 

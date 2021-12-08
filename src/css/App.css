@@ -28,6 +28,20 @@ hr {
 .cards-holder table {
   color: #fff;
 }
+.table-head > tr > th {
+  background-color: #282937;
+  border-color: #fff;
+  position: sticky;
+  top: 0;
+  /* z-index: 1; */
+}
+.table-footer > tr > td {
+  background-color: #282937;
+  border-color: #fff;
+  position: sticky;
+  bottom: 0;
+  /* z-index: 1; */
+}
 .cart-content-area {
   width: 35%;
   margin-left: 11px; /* change to ten later*/
