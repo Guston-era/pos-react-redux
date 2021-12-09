@@ -56,8 +56,29 @@ const PaymentOptions = () => {
 
   // function to modify balance
   const modifyBalance = () => {
-    const balance = parseInt(discount);
-    console.log(balance);
+    let thisdiscount = discount !== "" ? parseInt(discount) : 0;
+    let thisamount = amount !== "" ? parseInt(amount) : 0;
+
+    let totalToPay = 0;
+    items.map((item) => {
+      totalToPay += item.totalPrice;
+    });
+
+    const newBalance = thisamount - (totalToPay - thisdiscount);
+    setBalance(newBalance);
+    if (newBalance >= 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+  const completePayment = () => {
+    if (modifyBalance()) {
+      console.log("Payment complete");
+    } else {
+      console.log("Payment failed");
+      return false;
+    }
   };
   return (
     <>
@@ -89,7 +110,9 @@ const PaymentOptions = () => {
                 className="mb-3"
                 controlId="discount"
                 value={discount}
-                onChange={(e) => setDiscount(e.target.value)}
+                onChange={(e) => {
+                  setDiscount(e.target.value);
+                }}
                 onBlur={modifyBalance}
               >
                 <Form.Label column sm="">
@@ -100,14 +123,30 @@ const PaymentOptions = () => {
                 </Col>
               </Form.Group>
               <Form.Group as={Row} className="mb-3" controlId="balance">
-                <Form.Label column sm="3">
-                  Balance
+                <Form.Label column sm="5">
+                  Change To Give:
                 </Form.Label>
-                <Col sm="9">
-                  <Form.Control plaintext readOnly value={balance} />
+                <Col sm="7">
+                  <Form.Control
+                    plaintext
+                    readOnly
+                    value={balance}
+                    style={{
+                      color: `${
+                        balance !== "" && balance < 0 ? "red" : "white"
+                      }`,
+                      fontWeight: "bold",
+                      fontSize: "18px",
+                    }}
+                  />
                 </Col>
               </Form.Group>
-              <Button variant="success" type="submit">
+              <Button
+                variant="success"
+                type="button"
+                disabled={balance === "" || balance < 0}
+                onClick={completePayment}
+              >
                 Complete
               </Button>
             </Form>

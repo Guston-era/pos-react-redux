@@ -6,7 +6,10 @@ const Header = ({ rightText, searchBar }) => {
       <div className="header-logo-section">
         <p>gPOS</p>
       </div>
-      <div className="header-main-area">
+      <div
+        className="header-main-area"
+        style={{ width: `${rightText ? "55%" : "90%"}` }}
+      >
         <div className="header-user-info">
           <p>Gustone Alwanga</p>
           <span>Tuesday, 2 Dec 2021</span>
@@ -24,10 +27,11 @@ const Header = ({ rightText, searchBar }) => {
           </div>
         )}
       </div>
-
-      <div className="header-right-area">
-        <h4>{rightText}</h4>
-      </div>
+      {rightText && (
+        <div className="header-right-area">
+          <h4>{rightText}</h4>
+        </div>
+      )}
     </div>
   );
 };

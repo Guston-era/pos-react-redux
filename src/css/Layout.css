@@ -61,8 +61,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 55%;
+  /* width: 55%; */
   padding-left: 10px;
+  padding-right: 3px;
 }
 .header-user-info {
   line-height: 1px;
