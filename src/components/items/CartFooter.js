@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { commons } from "../../constants/common";
 import { selectItem, clearCart } from "../../redux_setup/slices/shopSlice";
 
-const CartFooter = () => {
+const CartFooter = ({ secondStage }) => {
   const dispatch = useDispatch();
   const itemsFromCart = useSelector(selectItem);
   const items = [...itemsFromCart];
@@ -38,11 +38,19 @@ const CartFooter = () => {
                   )}`}</p>
                 </Col>
                 <Col md={12}>
-                  <Link to="/payment">
-                    <Button variant="success" className="btn w-100">
-                      Proceed
-                    </Button>
-                  </Link>
+                  {secondStage ? (
+                    <Link to="/dashboard">
+                      <Button variant="warning" className="btn w-100">
+                        <i className="fa fa-arrow-left"></i> Back To Items
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Link to="/payment">
+                      <Button variant="success" className="btn w-100">
+                        Proceed
+                      </Button>
+                    </Link>
+                  )}
                 </Col>
               </div>
             </td>

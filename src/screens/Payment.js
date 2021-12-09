@@ -4,6 +4,7 @@ import CartFooter from "../components/items/CartFooter";
 import CartItems from "../components/items/CartItems";
 import Categories from "../components/items/Categories";
 import ItemCards from "../components/items/ItemCards";
+import PaymentOptions from "../components/items/PaymentOptions";
 import Header from "../components/layout/Header";
 import SideBar from "../components/layout/SideBar";
 import "../css/App.css";
@@ -29,7 +30,7 @@ const Payment = () => {
                 <CartItems />
               </tbody>
               <tfoot className="table-footer">
-                <CartFooter />
+                <CartFooter secondStage />
               </tfoot>
             </Table>
           </Container>
@@ -37,21 +38,7 @@ const Payment = () => {
         <div className="cart-content-area">
           <hr />
           <Container className="cards-holder">
-            <Table bordered>
-              <thead className="table-head">
-                <tr>
-                  <th>Item</th>
-                  <th>Qty</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <CartItems />
-              </tbody>
-              <tfoot className="table-footer">
-                <CartFooter />
-              </tfoot>
-            </Table>
+            <PaymentOptions />
           </Container>
         </div>
       </div>

@@ -25,7 +25,9 @@ hr {
   height: 100%;
   overflow-y: scroll;
 }
-.cards-holder table {
+.cards-holder table,
+p,
+form {
   color: #fff;
 }
 .table-head > tr > th {
