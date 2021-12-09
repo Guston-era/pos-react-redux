@@ -86,7 +86,6 @@ const ItemCards = () => {
   const itemsFromCart = useSelector(selectItem);
   const cartArray = [...itemsFromCart];
   const handleAddToCart = (item) => {
-    console.log(cartArray);
     //search if item exists in cart array
     if (cartArray.length > 0) {
       //proceed with check
