@@ -14,10 +14,13 @@ const shopSlice = createSlice({
     addToCart: (state, action) => {
       state.shopItem = action.payload;
     },
+    clearCart: (state) => {
+      state.shopItem = [];
+    },
   },
 });
 
-export const { addToCart } = shopSlice.actions;
+export const { addToCart, clearCart } = shopSlice.actions;
 
 // selectors
 export const selectItem = (state) => state.shop.shopItem;
