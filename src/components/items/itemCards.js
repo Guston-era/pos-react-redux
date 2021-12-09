@@ -93,7 +93,11 @@ const ItemCards = () => {
       const index = cartArray.findIndex((tempItem) => tempItem.id === item.id);
       if (index !== -1) {
         //id exists so increment the quantity
-        const newQuantity = cartArray[index].quantity + 1;
+        const newQuantity =
+          cartArray[index].quantity < item.maxNum
+            ? cartArray[index].quantity + 1
+            : cartArray[index].quantity;
+        //
         cartArray.splice(index, 1, {
           id: item.id,
           name: item.name,
@@ -101,6 +105,7 @@ const ItemCards = () => {
           totalPrice: item.price * newQuantity,
           image: item.image,
           quantity: newQuantity,
+          maxNum: item.maxNum,
         });
         // console.log(cartArray[index].name, cartArray[index].quantity);
       } else {
@@ -111,6 +116,7 @@ const ItemCards = () => {
           totalPrice: item.price,
           image: item.image,
           quantity: 1,
+          maxNum: item.maxNum,
         });
       }
     } else {
@@ -123,6 +129,7 @@ const ItemCards = () => {
         totalPrice: item.price,
         image: item.image,
         quantity: 1,
+        maxNum: item.maxNum,
       });
     }
 
