@@ -26,6 +26,23 @@ const CartItems = () => {
         quantity: newQuantity,
         maxNum: item.maxNum,
       });
+    } else if (action === "decrement") {
+      newQuantity =
+        items[index].quantity > 1
+          ? items[index].quantity - 1
+          : items[index].quantity;
+      //
+      items.splice(index, 1, {
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        totalPrice: item.price * newQuantity,
+        image: item.image,
+        quantity: newQuantity,
+        maxNum: item.maxNum,
+      });
+    } else {
+      items.splice(index, 1);
     }
 
     //final dispatch
