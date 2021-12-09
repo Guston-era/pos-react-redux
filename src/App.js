@@ -5,6 +5,7 @@ import Settings from "./screens/Settings";
 import Dashboard from "./screens/Dashboard";
 import { Provider } from "react-redux";
 import { store } from "./redux_setup/store";
+import Payment from "./screens/Payment";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             name="Dashboard"
             element={<Dashboard />}
           />
+          <Route exact path="/payment" name="Payment" element={<Payment />} />
           <Route
             exact
             path="/settings"

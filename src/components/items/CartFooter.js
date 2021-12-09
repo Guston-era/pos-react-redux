@@ -1,12 +1,20 @@
 import React from "react";
 import { Button, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { commons } from "../../constants/common";
-import { selectItem, addToCart } from "../../redux_setup/slices/shopSlice";
+import { selectItem, clearCart } from "../../redux_setup/slices/shopSlice";
 
 const CartFooter = () => {
+  const dispatch = useDispatch();
   const itemsFromCart = useSelector(selectItem);
   const items = [...itemsFromCart];
+  // clear the whole cart
+  const clearCartHandler = () => {
+    if (window.confirm("Are you sure you want to clear the cart?")) {
+      dispatch(clearCart());
+    }
+  };
   let total = 0;
   items.map((item) => {
     total += item.totalPrice;
@@ -19,7 +27,9 @@ const CartFooter = () => {
             <td colSpan="3">
               <div className="row">
                 <Col md={6}>
-                  <Button variant="danger">Clear Cart</Button>
+                  <Button variant="danger" onClick={clearCartHandler}>
+                    Clear Cart
+                  </Button>
                 </Col>
                 <Col md={6}>
                   <p className="bold">{`Total: ${commons.currency} ${total}`}</p>
@@ -28,9 +38,11 @@ const CartFooter = () => {
                   )}`}</p>
                 </Col>
                 <Col md={12}>
-                  <Button variant="success" className="btn w-100">
-                    Proceed
-                  </Button>
+                  <Link to="/payment">
+                    <Button variant="success" className="btn w-100">
+                      Proceed
+                    </Button>
+                  </Link>
                 </Col>
               </div>
             </td>
