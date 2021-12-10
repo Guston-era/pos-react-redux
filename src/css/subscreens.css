@@ -1,7 +1,10 @@
 .settings-panel {
-  width: 55%;
   padding: 10px;
+  /* border-top: 1px solid #1f1d2b; */
   display: flex;
+  flex: 1;
+  background-color: #1f1d2b;
+  margin-left: 1px;
   flex-direction: column;
   height: calc(100vh - 60px);
   overflow-y: scroll;

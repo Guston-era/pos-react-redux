@@ -8,7 +8,7 @@ const MiniSideBar = ({ active }) => {
       <h4>
         <i className="fa fa-bars"></i>
       </h4>
-      <Link to="/dashboard" className="menu-item">
+      <Link to="/settings/" className="menu-item">
         <div
           className={`inner-menu-item ${
             active === "general" && "menu-item-active"
@@ -17,46 +17,46 @@ const MiniSideBar = ({ active }) => {
           General Settings
         </div>
       </Link>
-      <Link to="/settings" className="menu-item">
+      <Link to="/settings/categories" className="menu-item">
         <div
           className={`inner-menu-item ${
-            active === "settings" && "menu-item-active"
+            active === "categories" && "menu-item-active"
           }`}
         >
           Categories
         </div>
       </Link>
-      <Link to="/settings" className="menu-item">
+      <Link to="/settings/brands" className="menu-item">
         <div
           className={`inner-menu-item ${
-            active === "settings" && "menu-item-active"
+            active === "brands" && "menu-item-active"
           }`}
         >
           Brands
         </div>
       </Link>
-      <Link to="/reports" className="menu-item">
+      <Link to="/settings/shop-items" className="menu-item">
         <div
           className={`inner-menu-item ${
-            active === "reports" && "menu-item-active"
+            active === "shop-items" && "menu-item-active"
           }`}
         >
           Shop Items
         </div>
       </Link>
-      <Link to="/reports" className="menu-item">
+      <Link to="/settings/receive-items" className="menu-item">
         <div
           className={`inner-menu-item ${
-            active === "reports" && "menu-item-active"
+            active === "receive-items" && "menu-item-active"
           }`}
         >
           Receive Items
         </div>
       </Link>
-      <Link to="/reports" className="menu-item">
+      <Link to="/settings/account" className="menu-item">
         <div
           className={`inner-menu-item ${
-            active === "reports" && "menu-item-active"
+            active === "account" && "menu-item-active"
           }`}
         >
           Account Settings

@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "../components/layout/Header";
-import MiniSideBar from "../components/layout/MiniSideBar";
 import SideBar from "../components/layout/SideBar";
 import AccountSettings from "./subscreens/AccountSettings";
 import Brands from "./subscreens/Brands";
@@ -16,7 +15,6 @@ const Settings = () => {
       <Header />
       <div className="flexed-content">
         <SideBar active="settings" />
-        {/* <MiniSideBar /> */}
         <div style={{ flex: 1, flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<GeneralSettings />} />

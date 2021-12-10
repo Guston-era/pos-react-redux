@@ -90,7 +90,7 @@
   align-items: flex-start;
   background-color: #1f1d2b;
   width: 15%;
-  margin-left: 10px;
+  margin-left: 2px;
   padding: 20px;
   max-height: calc(100vh - 60px);
   overflow-y: scroll;
