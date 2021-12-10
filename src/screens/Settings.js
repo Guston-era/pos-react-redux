@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/layout/Header";
+import MiniSideBar from "../components/layout/MiniSideBar";
 import SideBar from "../components/layout/SideBar";
 
 const Settings = () => {
@@ -9,8 +10,7 @@ const Settings = () => {
       <div className="flexed-content">
         <SideBar active="settings" />
 
-        <p>Settings</p>
-        <p>Settings</p>
+        <MiniSideBar />
       </div>
     </div>
   );

@@ -78,3 +78,23 @@
   justify-content: center;
   /* height: 100vh; */
 }
+/* end header styles */
+
+/* mini side bar styles */
+
+.mini-side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  align-items: flex-start;
+  background-color: #1f1d2b;
+  width: 15%;
+  margin-left: 10px;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  /* flex-grow: 100vh; */
+}
+.mini-side-bar .menu-item {
+  color: #ea7c69;
+  margin-bottom: 20px;
+}

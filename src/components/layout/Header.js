@@ -12,7 +12,7 @@ const Header = ({ rightText, searchBar }) => {
       >
         <div className="header-user-info">
           <p>Gustone Alwanga</p>
-          <span>Tuesday, 2 Dec 2021</span>
+          <span>Tuesday, 10 Dec 2021</span>
         </div>
         <div className="header-client-info">
           <span>REBS POS</span>
