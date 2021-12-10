@@ -5,7 +5,9 @@ import SideBar from "../components/layout/SideBar";
 import AccountSettings from "./subscreens/AccountSettings";
 import Brands from "./subscreens/Brands";
 import Categories from "./subscreens/Categories";
+import ExpenseReport from "./subscreens/ExpenseReport.js";
 import GeneralSettings from "./subscreens/GeneralSettings";
+import SalesReport from "./subscreens/SalesReport";
 import StatusReport from "./subscreens/StatusReport";
 
 const Reports = () => {
@@ -17,8 +19,8 @@ const Reports = () => {
         <div style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<StatusReport />} />
-            <Route path="/sales" element={<Categories />} />
-            <Route path="/expense" element={<Brands />} />
+            <Route path="/sales" element={<SalesReport />} />
+            <Route path="/expense" element={<ExpenseReport />} />
           </Routes>
         </div>
       </div>
