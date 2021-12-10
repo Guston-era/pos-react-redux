@@ -5,6 +5,7 @@ body {
 .flexed-content {
   display: flex;
 }
+
 hr {
   color: #fff;
 }

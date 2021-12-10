@@ -12,6 +12,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <Routes>
+          <Route exact path="/" name="Dashboard" element={<Dashboard />} />
           <Route
             exact
             path="/dashboard"
@@ -19,12 +20,8 @@ function App() {
             element={<Dashboard />}
           />
           <Route exact path="/payment" name="Payment" element={<Payment />} />
-          <Route
-            exact
-            path="/settings"
-            name="Settings"
-            element={<Settings />}
-          />
+          <Route path="/settings/*" name="Settings" element={<Settings />} />
+
           <Route exact path="/reports" name="Reports" element={<Reports />} />
         </Routes>
       </div>
