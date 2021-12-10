@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/payment" name="Payment" element={<Payment />} />
           <Route path="/settings/*" name="Settings" element={<Settings />} />
 
-          <Route exact path="/reports/*" name="Reports" element={<Reports />} />
+          <Route path="/reports/*" name="Reports" element={<Reports />} />
         </Routes>
       </div>
     </Provider>

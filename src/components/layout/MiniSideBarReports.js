@@ -6,7 +6,7 @@ const MiniSideBarSettings = ({ active }) => {
   return (
     <div className="mini-side-bar">
       <h6>
-        <i className="fa fa-cog"></i> Reports
+        <i className="fa fa-chart"></i> Reports
       </h6>
       <Link to="/reports/" className="menu-item">
         <div
