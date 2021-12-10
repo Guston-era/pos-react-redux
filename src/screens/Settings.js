@@ -22,7 +22,7 @@ const Settings = () => {
             <Route path="/brands" element={<Brands />} />
             <Route path="/shop-items" element={<ShopItems />} />
             <Route path="/receive-items" element={<ReceiveItems />} />
-            <Route path="/account-settings" element={<AccountSettings />} />
+            <Route path="/account" element={<AccountSettings />} />
           </Routes>
         </div>
       </div>
