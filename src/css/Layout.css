@@ -100,6 +100,12 @@
   color: #ea7c69;
   margin-bottom: 20px;
 }
+.mini-side-bar .menu-item-active {
+  color: #fff;
+  background-color: #ea7c69;
+  padding: 10px;
+  border-radius: 10px;
+}
 .mini-side-bar::-webkit-scrollbar {
   display: none;
 }

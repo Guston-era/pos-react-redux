@@ -1,11 +1,11 @@
 import React from "react";
 import "../../css/subscreens.css";
-import MiniSideBar from "../../components/layout/MiniSideBar";
+import MiniSideBarSettings from "../../components/layout/MiniSideBarSettings";
 
 const GeneralSettings = () => {
   return (
     <div className="flexed-content">
-      <MiniSideBar active="general" />
+      <MiniSideBarSettings active="general" />
       <div className="settings-panel">
         <p> I am the general settings</p>
         <p> I am the general settings</p>

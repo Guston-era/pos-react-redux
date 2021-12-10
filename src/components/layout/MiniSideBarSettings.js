@@ -2,19 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../css/Layout.css";
 
-const MiniSideBar = ({ active }) => {
+const MiniSideBarSettings = ({ active }) => {
   return (
     <div className="mini-side-bar">
-      <h4>
-        <i className="fa fa-bars"></i>
-      </h4>
+      <h6>
+        <i className="fa fa-cog"></i> SETTINGS
+      </h6>
       <Link to="/settings/" className="menu-item">
         <div
           className={`inner-menu-item ${
             active === "general" && "menu-item-active"
           }`}
         >
-          General Settings
+          General
         </div>
       </Link>
       <Link to="/settings/categories" className="menu-item">
@@ -59,11 +59,11 @@ const MiniSideBar = ({ active }) => {
             active === "account" && "menu-item-active"
           }`}
         >
-          Account Settings
+          My Account
         </div>
       </Link>
     </div>
   );
 };
 
-export default MiniSideBar;
+export default MiniSideBarSettings;
