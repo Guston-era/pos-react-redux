@@ -91,10 +91,20 @@
   width: 15%;
   margin-left: 10px;
   padding: 20px;
-  height: calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
+  overflow-y: scroll;
   /* flex-grow: 100vh; */
 }
 .mini-side-bar .menu-item {
   color: #ea7c69;
   margin-bottom: 20px;
+}
+.mini-side-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.mini-side-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

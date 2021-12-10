@@ -50,6 +50,15 @@ const MiniSideBar = ({ active }) => {
             active === "reports" && "menu-item-active"
           }`}
         >
+          Receive Items
+        </div>
+      </Link>
+      <Link to="/reports" className="menu-item">
+        <div
+          className={`inner-menu-item ${
+            active === "reports" && "menu-item-active"
+          }`}
+        >
           Account Settings
         </div>
       </Link>
