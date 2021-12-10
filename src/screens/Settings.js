@@ -17,7 +17,7 @@ const Settings = () => {
       <div className="flexed-content">
         <SideBar active="settings" />
         {/* <MiniSideBar /> */}
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<GeneralSettings />} />
             <Route path="/categories" element={<Categories />} />

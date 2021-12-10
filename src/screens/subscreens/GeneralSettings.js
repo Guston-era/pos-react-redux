@@ -7,7 +7,64 @@ const GeneralSettings = () => {
   return (
     <div className="flexed-content">
       <MiniSideBar />
-      <p> I am the general settings</p>
+      <div className="settings-panel">
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+        <p> I am the general settings</p>
+      </div>
     </div>
   );
 };
