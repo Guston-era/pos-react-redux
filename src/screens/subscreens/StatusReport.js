@@ -15,7 +15,7 @@ const StatusReport = () => {
     datasets: [
       {
         id: 1,
-        label: "Rainfall",
+        label: "Sales",
         // backgroundColor: "#ea7c69",
         backgroundColor: [
           "#B21F00",
@@ -37,7 +37,7 @@ const StatusReport = () => {
     datasets: [
       {
         id: 1,
-        label: "Rainfall",
+        label: "Sales",
         backgroundColor: "#ea7c69",
 
         borderColor: "rgba(0,0,0,1)",
@@ -46,7 +46,7 @@ const StatusReport = () => {
       },
       {
         id: 2,
-        label: "Humidity",
+        label: "Expenses",
         backgroundColor: "green",
         borderColor: "rgba(0,0,0,1)",
         borderWidth: 2,
@@ -58,7 +58,7 @@ const StatusReport = () => {
     labels: ["January", "February", "March", "April", "May"],
     datasets: [
       {
-        label: "Rainfall",
+        label: "Sales",
         backgroundColor: [
           "#B21F00",
           "#C9DE00",
@@ -76,7 +76,7 @@ const StatusReport = () => {
         data: [65, 59, 80, 81, 56],
       },
       {
-        label: "Humidity",
+        label: "Expenses",
         backgroundColor: [
           "#B21F00",
           "#C9DE00",
@@ -113,7 +113,7 @@ const StatusReport = () => {
           options={{
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Average Sales per month",
               fontSize: 20,
             },
             legend: {
@@ -128,7 +128,7 @@ const StatusReport = () => {
           options={{
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Average Sales per month",
               fontSize: 20,
             },
             legend: {
@@ -143,7 +143,7 @@ const StatusReport = () => {
           options={{
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Average Sales per month",
               fontSize: 20,
             },
             legend: {
@@ -159,7 +159,7 @@ const StatusReport = () => {
           options={{
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Average Sales per month",
               fontSize: 20,
             },
             legend: {
@@ -175,7 +175,7 @@ const StatusReport = () => {
           options={{
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Average Sales per month",
               fontSize: 20,
             },
             legend: {
@@ -190,7 +190,7 @@ const StatusReport = () => {
           options={{
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Average Sales per month",
               fontSize: 20,
             },
             legend: {
@@ -206,7 +206,7 @@ const StatusReport = () => {
           options={{
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Average Sales per month",
               fontSize: 20,
             },
             legend: {
@@ -222,7 +222,7 @@ const StatusReport = () => {
           options={{
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Average Sales per month",
               fontSize: 20,
             },
             legend: {
